@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
       
@@ -42,10 +42,10 @@ const Hero: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
               Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 bg-[length:200%_auto] animate-gradient">{heroData.name}</span>
             </h1>
-            <div className="text-xl md:text-2xl text-gray-300 mb-2">
+            <div className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-2">
               {heroData.title} at <span className="text-purple-400 font-semibold">{heroData.company}</span>
             </div>
             <div className="flex items-center justify-center text-gray-400 mb-6">

@@ -46,7 +46,7 @@ const About: React.FC = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {aboutData.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{aboutData.title.split(' ')[1]}</span>
           </motion.h2>
@@ -80,7 +80,7 @@ const About: React.FC = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-4"
           >
             {aboutData.stats.map((stat, index) => (
               <motion.div
@@ -90,13 +90,13 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-slate-700/50 p-6 rounded-xl text-center backdrop-blur-sm border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-700/50 p-4 rounded-xl text-center backdrop-blur-sm border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4">
-                  {React.createElement(statIcons[index], { size: 24, className: "text-white" })}
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-3">
+                  {React.createElement(statIcons[index], { size: 20, className: "text-white" })}
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

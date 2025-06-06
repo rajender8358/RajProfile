@@ -38,7 +38,7 @@ const Skills: React.FC = () => {
         >
           <motion.h2
             variants={skillVariants}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {skillsData.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{skillsData.title.split(' ')[1]}</span>
           </motion.h2>

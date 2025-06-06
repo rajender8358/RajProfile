@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {projectsData.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{projectsData.title.split(' ')[1]}</span>
           </motion.h2>
@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
           ></motion.div>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-300 max-w-3xl mx-auto"
+            className="text-sm sm:text-base text-gray-300 max-w-3xl mx-auto"
           >
             {projectsData.description}
           </motion.p>
@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid lg:grid-cols-2 gap-8"
         >
           {projectsData.projects.map((project, index) => (
             <motion.div
@@ -84,10 +84,10 @@ const Projects: React.FC = () => {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-200">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-200">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 

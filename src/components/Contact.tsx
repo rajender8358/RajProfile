@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {contactData.title.split(' ')[0]} {contactData.title.split(' ')[1]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{contactData.title.split(' ')[2]}</span>
           </motion.h2>
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -103,12 +103,12 @@ const Contact: React.FC = () => {
                   whileHover={{ x: 10 }}
                   className="flex items-center space-x-4 p-4 bg-slate-700/50 rounded-lg border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
                     {React.createElement(contactIcons[detail.type as keyof typeof contactIcons], { size: 20, className: "text-white" })}
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-gray-300 text-sm">{detail.label}</p>
-                    <p className="text-white font-semibold">{detail.value}</p>
+                    <p className="text-white font-semibold break-all">{detail.value}</p>
                   </div>
                 </motion.div>
               ))}

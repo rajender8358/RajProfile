@@ -37,7 +37,7 @@ const Experience: React.FC = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {experienceData.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{experienceData.title.split(' ')[1]}</span>
           </motion.h2>
@@ -69,17 +69,17 @@ const Experience: React.FC = () => {
                 <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-4 border-slate-900"></div>
 
                 {/* Content */}
-                <div className="ml-16 flex-1">
-                  <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/30 transition-all duration-300 backdrop-blur-sm">
+                <div className="ml-12 sm:ml-16 flex-1">
+                  <div className="bg-slate-800/50 p-4 sm:p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/30 transition-all duration-300 backdrop-blur-sm">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                       <div>
                         <div className="flex items-center space-x-2 mb-2">
                           <Building size={20} className="text-purple-400" />
-                          <h3 className="text-2xl font-bold text-white">{exp.company}</h3>
+                          <h3 className="text-xl sm:text-2xl font-bold text-white">{exp.company}</h3>
                         </div>
-                        <h4 className="text-xl text-purple-400 font-semibold">{exp.position}</h4>
+                        <h4 className="text-lg sm:text-xl text-purple-400 font-semibold">{exp.position}</h4>
                       </div>
-                      <div className="flex flex-col lg:items-end space-y-2 mt-2 lg:mt-0">
+                      <div className="flex flex-col items-start lg:items-end space-y-2 mt-2 lg:mt-0">
                         <div className="flex items-center space-x-2 text-gray-300">
                           <Calendar size={16} />
                           <span className="text-sm">{exp.duration}</span>
