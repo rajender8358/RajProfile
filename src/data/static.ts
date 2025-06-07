@@ -1,9 +1,10 @@
 import URLife from "../assets/urlife.png";
 import Twindolphin from "../assets/dolphin.png";
 import Rowdy from "../assets/rwdy.jpg";
-import LEO1 from "../assets/leo1.jpeg";
-import Cards from "../assets/42cards.png";
-import JVB from "../assets/jvb.png";
+import LEO1 from "../assets/leo1.avif";
+import Cards from "../assets/cards.webp";
+import JVB from "../assets/jvb.jpeg";
+
 
 export const navLinks = [
   { href: '#home', label: 'Home' },
@@ -16,7 +17,7 @@ export const navLinks = [
 
 export const heroData = {
   name: "Rajender Reddy Garlapally",
-  firstName: "Rajender",
+  firstName: "G.Rajender",
   lastName: "Reddy",
   title: "Senior Software Engineer",
   company: "OSI Digital",
@@ -32,7 +33,7 @@ export const heroData = {
 export const aboutData = {
   title: "About Me",
   headline: "Passionate Full-Stack Developer",
-  description: `Seasoned and results-driven Front-End Developer with 7+ years of extensive experience in Mobile Application Development (React Native) and Web Development (React.js), delivering high-performance, scalable, and user-centric applications. Proven expertise in leading cross-functional teams and collaborating with designers, backend engineers, and stakeholders to translate business requirements into technical solutions.
+  description: `Seasoned and results-driven Full-Stack Developer with 7+ years of extensive experience in Mobile Application Development (React Native) and Web Development (React.js), delivering high-performance, scalable, and user-centric applications. Proven expertise in leading cross-functional teams and collaborating with designers, backend engineers, and stakeholders to translate business requirements into technical solutions.
 
 Demonstrated hands-on proficiency in building dynamic and responsive UIs, optimizing performance, and ensuring pixel-perfect implementation across platforms. Adept in backend development using Node.js and Python with Django, enabling full-stack capabilities and streamlined API integrations.
 
@@ -105,7 +106,7 @@ export const projectsData = {
   projects: [
     {
       title: '42 Cards',
-      description: 'A comprehensive application to find nearby blood donors with advanced filtering options, location-based search, and real-time availability updates.',
+      description: `Credit Card Processing Solution (Finance Domain) As a front-end developer, I was responsible for developing a secure and scalable web application to manage end-to-end credit card portfolios. This included modules for card issuance, transaction processing, billing, collections, and compliance tracking. I built dynamic UIs using React.js with Redux, integrated backend APIs, and managed deployments using CI/CD pipelines on AWS (S3, Cognito, Amplify). The platform was tailored to meet each bank's operational and regulatory needs, ensuring performance and security at scale.`,
       image: Cards,
       technologies: ['React.JS', 'GraphQL', 'AWS Amplify', ' AWS Cognito', 'DynamoDB'],
       githubUrl: '#',
@@ -114,7 +115,7 @@ export const projectsData = {
     },
     {
       title: 'UR.Life',
-      description: 'A comprehensive application to find nearby blood donors with advanced filtering options, location-based search, and real-time availability updates.',
+      description: `UR.Life is a comprehensive wellness platform that provides personalized health and fitness plans. I contributed to the development of a full-featured wellness platform that delivers expert-backed content, including health tips, fitness videos, diet plans, and consultations. I worked on designing and implementing engaging, user-friendly interfaces using React.js, ensuring mobile responsiveness and seamless UX. I also integrated CMS-backed dynamic content modules and helped in automating deployments using AWS. The application empowers users to embrace healthy living through interactive and personalized content.`,
       image: URLife,
       technologies: ['React Native', 'React.JS', 'Firebase', 'TV Application'],
       githubUrl: '#',
@@ -123,7 +124,7 @@ export const projectsData = {
     },
     {
       title: 'Twindolphin',
-      description: 'A platform to manage gaming events with Google OAuth integration, tournament brackets, player registration, and real-time match updates.',
+      description: `Twin Dolphin, a luxury hotel booking and trip planning web application. Built using React Native & React.js, the platform allows users to explore resorts, book luxury accommodations, and plan personalized itineraries. I developed interactive booking flows, integrated dynamic content, and focused on delivering a visually rich and responsive UI that aligns with the brand's premium travel experience. My responsibilities also included performance optimization and ensuring smooth API integration for booking and availability data.`,
       image: Twindolphin,
       technologies: ['React Native', 'React.JS', 'Tailwind CSS', 'Prismic', 'Prismatic'],
       githubUrl: '#',
@@ -132,7 +133,8 @@ export const projectsData = {
     },
     {
       title: 'Rowdy',
-      description: 'A modern admin dashboard for e-commerce management with analytics, inventory tracking, and customer management features.',
+      description: `RWDY – Cultural Fashion Movement E-Commerce Platform
+As part of the RWDY project, I helped develop a visually rich e-commerce front-end that showcases India's cultural fashion legacy. I implemented UI components highlighting each product's story, quality, and connection to Indian heritage. The application was built with React + Redux, featured icon-driven designs, and supported A4-ready printable product info and lookbooks. My work focused on storytelling through UI/UX, creating an immersive experience that aligned with the brand's mission of reclaiming Indian textile superiority.`,
       image: Rowdy,
       technologies: ['React Native', 'React.JS'],
       githubUrl: '#',
@@ -141,7 +143,7 @@ export const projectsData = {
     },
     {
       title: 'Leo 1',
-      description: 'A collaborative task management application with real-time updates, team collaboration, and project tracking capabilities.',
+      description: `Leo1 is a fintech-powered education platform that simplifies school fee management and enhances parent-school engagement. I contributed to building key UI modules using React Native & React.js, including fee dashboards, digital payment flows, and academic records. I integrated secure APIs with AWS Cognito for user authentication and worked with fintech best practices to handle sensitive data. My focus was on usability, responsiveness, and ensuring seamless experiences for students, parents, and school administrators.`,
       image: LEO1,
       technologies: ['React Native', 'React JS', 'Material UI', 'Node.js', 'S3'],
       githubUrl: '#',
@@ -150,7 +152,7 @@ export const projectsData = {
     },
     {
       title: 'JVB Health and Wellness',
-      description: 'A collaborative task management application with real-time updates, team collaboration, and project tracking capabilities.',
+      description: `This platform collects health data from various smartwatches and wearables to provide personalized health insights and suggestions. I played a key role in developing the React Native & React + Redux based frontend that fetches and displays real-time health data such as steps, sleep, heart rate, and more. The app offers daily health reports and wellness recommendations based on user vitals. I also worked on integrating APIs for device syncing, data visualization with charts, and creating a user-friendly dashboard to track health trends over time.`,
       image: JVB,
       technologies: ['React Native', 'React JS', 'Material UI', 'Node.js', 'S3'],
       githubUrl: '#',
@@ -168,8 +170,8 @@ export const skillsData = {
     { name: 'React.js', size: 'large', color: 'from-blue-400 to-cyan-400', position: { x: -80, y: -40 } },
     { name: 'JavaScript', size: 'medium', color: 'from-yellow-400 to-orange-400', position: { x: 0, y: -160 } },
     { name: 'TypeScript', size: 'medium', color: 'from-blue-500 to-blue-600', position: { x: 200, y: -80 } },
+    { name: 'Redux', size: 'medium', color: 'from-yellow-500 to-blue-500', position: { x: -180, y: -100 } },
     { name: 'Node.js', size: 'medium', color: 'from-green-400 to-emerald-400', position: { x: -200, y: 80 } },
-    { name: 'Python', size: 'medium', color: 'from-yellow-500 to-blue-500', position: { x: -180, y: -100 } },
     { name: 'GraphQL', size: 'medium', color: 'from-pink-500 to-rose-500', position: { x: 180, y: 150 } },
     { name: 'HTML', size: 'small', color: 'from-red-500 to-orange-500', position: { x: -150, y: -180 } },
     { name: 'CSS', size: 'small', color: 'from-blue-500 to-indigo-500', position: { x: 150, y: -180 } },

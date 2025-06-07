@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
-import profileImage from '../assets/profile.jpeg';
+import profileImage from '../assets/pic.png';
 import { heroData } from '../data/static';
 import cv from '../assets/cv.pdf';
 
