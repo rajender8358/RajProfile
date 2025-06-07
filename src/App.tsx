@@ -9,7 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white font-inter">
+    <div className="min-h-screen bg-slate-900 text-white font-inter overflow-x-hidden">
       <Navigation />
       <Hero />
       <About />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { projectsData } from '../data/static';
 
 const Projects: React.FC = () => {
@@ -27,11 +27,11 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="py-20 bg-slate-800/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={containerVariants}
           className="text-center mb-16"
         >
@@ -39,7 +39,10 @@ const Projects: React.FC = () => {
             variants={itemVariants}
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
-            {projectsData.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{projectsData.title.split(' ')[1]}</span>
+            {projectsData.title.split(' ')[0]}{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              {projectsData.title.split(' ')[1]}
+            </span>
           </motion.h2>
           <motion.div
             variants={itemVariants}
@@ -56,7 +59,7 @@ const Projects: React.FC = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={containerVariants}
           className="grid lg:grid-cols-2 gap-8"
         >
@@ -109,6 +112,8 @@ const Projects: React.FC = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all duration-200"
                   >
                     <ExternalLink size={16} />
