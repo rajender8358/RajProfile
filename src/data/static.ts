@@ -110,7 +110,7 @@ export const projectsData = {
       image: Cards,
       technologies: ['React.JS', 'GraphQL', 'AWS Amplify', ' AWS Cognito', 'DynamoDB'],
       githubUrl: '#',
-      liveUrl: 'https://www.42-cards.com/',
+      liveUrl: 'https://www.42cards.com/',
       category: 'Web Applications'
     },
     {
