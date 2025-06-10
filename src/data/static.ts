@@ -40,8 +40,8 @@ Demonstrated hands-on proficiency in building dynamic and responsive UIs, optimi
 Well-versed in AWS cloud services, including Cognito (authentication/authorization), Amplify, DynamoDB, and S3, ensuring secure and efficient cloud-native applications. Passionate about clean architecture, automation, and continuous integration practices. Committed to delivering robust, maintainable code and driving innovation through cutting-edge technologies.`,
   stats: [
     { label: 'Years Experience', value: '7+' },
-    { label: 'Projects Completed', value: '20+' },
-    { label: 'Happy Clients', value: '20+' },
+    { label: 'Projects Completed', value: '12+' },
+    { label: 'Happy Clients', value: '12+' },
     { label: 'Technologies', value: '15+' },
   ]
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { contactData } from '../data/static';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,12 +11,29 @@ const Contact: React.FC = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<'idle' | 'success' | 'error' | 'loading'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('loading');
+    try {
+      await emailjs.send(
+        'service_lr94iri',
+        'template_jvtyflo',
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        '_VYgtZtvayBRK3ex1'
+      );
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus('idle'), 3000);
+    } catch (error) {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 3000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -198,11 +216,25 @@ const Contact: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg"
+                className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:from-pink-500 hover:to-purple-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400/50"
+                disabled={status === 'loading'}
               >
-                <Send size={20} />
-                <span>{contactData.form.submitButton}</span>
+                {status === 'loading' ? (
+                  <svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                  </svg>
+                ) : (
+                  <Send className="mr-2" size={18} />
+                )}
+                {status === 'loading' ? 'Sending...' : 'Send Message'}
               </motion.button>
+              {status === 'success' && (
+                <p className="text-green-400 text-center mt-2">Message sent successfully!</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-400 text-center mt-2">Failed to send message. Please try again later.</p>
+              )}
             </form>
           </motion.div>
         </div>

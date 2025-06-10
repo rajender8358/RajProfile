@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import profileImage from '../assets/pic.png';
 import { heroData } from '../data/static';
-import cv from '../assets/cv.pdf';
+import cv from '../assets/Rajender_Reddy_Garlapally_Resume.pdf';
 
 const Hero: React.FC = () => {
   const scrollToNext = () => {
