@@ -67,7 +67,7 @@ const About: React.FC = () => {
             <h3 className="text-3xl font-bold mb-6">{aboutData.headline}</h3>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               {aboutData.description.split('\n\n').map((paragraph, index) => (
-                <p key={index}>
+                <p key={index} className="text-justify [hyphens:auto]">
                   {paragraph}
                 </p>
               ))}

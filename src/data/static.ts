@@ -207,6 +207,8 @@ export const contactData = {
     title: "Follow Me",
     links: [
       { name: 'linkedin', url: 'https://www.linkedin.com/in/rajenderreddy78/' },
+      { name: 'github', url: 'https://github.com/rajender8358' },
+      { name: 'instagram', url: 'https://www.instagram.com/rajender_reddy78' }
     ],
    
   },

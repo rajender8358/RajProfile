@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-200">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed text-justify [hyphens:auto]">
                   {project.description}
                 </p>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
 import { contactData } from '../data/static';
 import emailjs from '@emailjs/browser';
 
@@ -73,6 +73,7 @@ const Contact: React.FC = () => {
   const socialIcons = {
     github: Github,
     linkedin: Linkedin,
+    instagram: Instagram,
   };
 
   return (
