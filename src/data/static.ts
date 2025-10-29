@@ -24,7 +24,7 @@ export const heroData = {
   location: "Hyderabad, India",
   description: "A highly skilled and experienced developer specializing in building robust and scalable mobile and web applications using technologies like React Native, React.js, Swift, AWS Cognito, Amplify, and GraphQL",
   socials: [
-    { name: "linkedin", url: "https://www.linkedin.com/in/rajenderreddy78/" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/rajenderreddy-fullstackdeveloper/" },
     { name: "email", url: "rajenderreddy.garlapalli@gmail.com" },
   ],
   cvURL: "",
@@ -206,7 +206,7 @@ export const contactData = {
   socials: {
     title: "Follow Me",
     links: [
-      { name: 'linkedin', url: 'https://www.linkedin.com/in/rajenderreddy78/' },
+      { name: 'linkedin', url: 'https://www.linkedin.com/in/rajenderreddy-fullstackdeveloper/' },
       { name: 'github', url: 'https://github.com/rajender8358' },
       { name: 'instagram', url: 'https://www.instagram.com/rajender_reddy78' }
     ],
