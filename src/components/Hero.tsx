@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ChevronDown, Linkedin, Mail, Download } from 'lucide-react';
 import profileImage from '../assets/pic.png';
 import { heroData } from '../data/static';
-import cv from '../assets/Rajender_Reddy_Garlapally_Resume.pdf';
+import cv from '../assets/RajenderReddy_CV_2026.pdf';
 
 const Hero: React.FC = () => {
   const scrollToNext = () => {
@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
             >
               View My Work
             </motion.button>
-            <a href={cv} download="Rajender-Reddy-CV.pdf">
+            <a href={cv} download="RajenderReddy_CV_2026.pdf">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
