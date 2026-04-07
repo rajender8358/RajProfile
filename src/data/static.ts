@@ -4,7 +4,24 @@ import Rowdy from "../assets/rwdy.jpg";
 import LEO1 from "../assets/leo1.avif";
 import Cards from "../assets/cards.webp";
 import JVB from "../assets/jvb.jpeg";
+import NavApp from "../assets/nav-app-navotas.png";
+import Mastery137 from "../assets/137-mastery.png";
 
+export type PortfolioProject = {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+  category: string;
+  /** Solid fill behind the thumbnail; use a key color from the project logo */
+  thumbnailBg?: string;
+  /** When true, skips dark vignette overlay (e.g. white logo canvas) */
+  thumbnailLight?: boolean;
+  /** Full-bleed cover photo; ignores thumbnailBg / centered logo layout */
+  thumbnailCover?: boolean;
+};
 
 export const navLinks = [
   { href: '#home', label: 'Home' },
@@ -33,15 +50,15 @@ export const heroData = {
 export const aboutData = {
   title: "About Me",
   headline: "Passionate Full-Stack Developer",
-  description: `Seasoned and results-driven Full-Stack Developer with 7+ years of extensive experience in Mobile Application Development (React Native) and Web Development (React.js), delivering high-performance, scalable, and user-centric applications. Proven expertise in leading cross-functional teams and collaborating with designers, backend engineers, and stakeholders to translate business requirements into technical solutions.
+  description: `Seasoned and results-driven Full-Stack Developer with 8+ years of extensive experience in Mobile Application Development (React Native) and Web Development (React.js), delivering high-performance, scalable, and user-centric applications. Proven expertise in leading cross-functional teams and collaborating with designers, backend engineers, and stakeholders to translate business requirements into technical solutions.
 
 Demonstrated hands-on proficiency in building dynamic and responsive UIs, optimizing performance, and ensuring pixel-perfect implementation across platforms. Adept in backend development using Node.js and Python with Django, enabling full-stack capabilities and streamlined API integrations.
 
 Well-versed in AWS cloud services, including Cognito (authentication/authorization), Amplify, DynamoDB, and S3, ensuring secure and efficient cloud-native applications. Passionate about clean architecture, automation, and continuous integration practices. Committed to delivering robust, maintainable code and driving innovation through cutting-edge technologies.`,
   stats: [
-    { label: 'Years Experience', value: '7+' },
-    { label: 'Projects Completed', value: '12+' },
-    { label: 'Happy Clients', value: '12+' },
+    { label: 'Years Experience', value: '8+' },
+    { label: 'Projects Completed', value: '14+' },
+    { label: 'Happy Clients', value: '14+' },
     { label: 'Technologies', value: '15+' },
   ]
 };
@@ -100,10 +117,26 @@ export const experienceData = {
   ]
 };
 
-export const projectsData = {
+export const projectsData: {
+  title: string;
+  description: string;
+  projects: PortfolioProject[];
+} = {
   title: "Featured Projects",
   description: "Here are some of my recent projects that showcase my skills in full-stack development, problem-solving, and creating user-centric applications.",
   projects: [
+    {
+      title: 'Nav App (City of Navotas)',
+      description: `NavApp is a citizen-centric mobile application developed for the Navotas City Government (Philippines) to digitize and streamline public service delivery. The app enables users to register, manage family profiles, access government programs, participate in events, and raise complaints through an integrated chatbot. It supports QR-based attendance, real-time notifications, and seamless API integrations with external systems like health and benefits platforms.
+
+As the Lead Flutter Developer, I was responsible for leading the front-end mobile team, handling end-to-end development, code architecture, and deployments. I ensured scalable and maintainable code practices while optimizing performance for high user traffic (~250K users). I also collaborated closely with backend teams for API integrations and delivered a smooth, user-friendly experience.`,
+      image: NavApp,
+      technologies: ['Flutter', 'Angular'],
+      githubUrl: '#',
+      liveUrl: 'https://app.navotas.gov.ph/',
+      category: 'Web & Mobile Applications',
+      thumbnailBg: '#F40505',
+    },
     {
       title: '42 Cards',
       description: `Credit Card Processing Solution (Finance Domain) As a front-end developer, I was responsible for developing a secure and scalable web application to manage end-to-end credit card portfolios. This included modules for card issuance, transaction processing, billing, collections, and compliance tracking. I built dynamic UIs using React.js with Redux, integrated backend APIs, and managed deployments using CI/CD pipelines on AWS (S3, Cognito, Amplify). The platform was tailored to meet each bank's operational and regulatory needs, ensuring performance and security at scale.`,
@@ -111,7 +144,8 @@ export const projectsData = {
       technologies: ['React.JS', 'GraphQL', 'AWS Amplify', ' AWS Cognito', 'DynamoDB'],
       githubUrl: '#',
       liveUrl: 'https://www.42cards.com/',
-      category: 'Web Applications'
+      category: 'Web Applications',
+      thumbnailBg: '#0c1929',
     },
     {
       title: 'UR.Life',
@@ -120,7 +154,8 @@ export const projectsData = {
       technologies: ['React Native', 'React.JS', 'Firebase', 'TV Application'],
       githubUrl: '#',
       liveUrl: 'https://ur.life',
-      category: 'Mobile, TV and Web Applications'
+      category: 'Mobile, TV and Web Applications',
+      thumbnailCover: true,
     },
     {
       title: 'Twindolphin',
@@ -129,7 +164,8 @@ export const projectsData = {
       technologies: ['React Native', 'React.JS', 'Tailwind CSS', 'Prismic', 'Prismatic'],
       githubUrl: '#',
       liveUrl: 'https://twindolphin.com/',
-      category: 'Mobile and Web Applications'
+      category: 'Mobile and Web Applications',
+      thumbnailCover: true,
     },
     {
       title: 'Rowdy',
@@ -139,7 +175,8 @@ As part of the RWDY project, I helped develop a visually rich e-commerce front-e
       technologies: ['React Native', 'React.JS'],
       githubUrl: '#',
       liveUrl: 'https://rwdy.in/',
-      category: 'E-Commerce, Mobile and Web Applications'
+      category: 'E-Commerce, Mobile and Web Applications',
+      thumbnailBg: '#000000',
     },
     {
       title: 'Leo 1',
@@ -148,7 +185,8 @@ As part of the RWDY project, I helped develop a visually rich e-commerce front-e
       technologies: ['React Native', 'React JS', 'Material UI', 'Node.js', 'S3'],
       githubUrl: '#',
       liveUrl: 'https://www.leo1.in/',
-      category: 'Mobile and Web Applications'
+      category: 'Mobile and Web Applications',
+      thumbnailBg: '#000000',
     },
     {
       title: 'JVB Health and Wellness',
@@ -157,7 +195,21 @@ As part of the RWDY project, I helped develop a visually rich e-commerce front-e
       technologies: ['React Native', 'React JS', 'Material UI', 'Node.js', 'S3'],
       githubUrl: '#',
       liveUrl: 'https://www.jvbwellness.com/',
-      category: 'Mobile and Web Applications'
+      category: 'Mobile and Web Applications',
+      thumbnailCover: true,
+    },
+    {
+      title: '137 Mastery',
+      description: `137 Mastery is a digital content platform designed to deliver structured learning programs, courses, and premium educational resources to users. The platform enables users to explore content, enroll in programs, and access materials through a seamless and intuitive interface. It includes features such as secure authentication, content access management, payment integration, and personalized user experiences.
+
+As a Frontend Developer, I was responsible for developing and maintaining the user interface, ensuring responsiveness and consistency across devices. I worked on API integrations for content delivery, user management, and payment workflows. I focused on optimizing performance, improving usability, and delivering a smooth and engaging user experience.`,
+      image: Mastery137,
+      technologies: ['React JS', 'AWS', 'MongoDB', 'Python', 'Django'],
+      githubUrl: '#',
+      liveUrl: 'https://137mastery.com/',
+      category: 'Web Applications',
+      thumbnailBg: '#ffffff',
+      thumbnailLight: true,
     }
   ]
 };

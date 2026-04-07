@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { projectsData } from '../data/static';
 
+const DEFAULT_PROJECT_THUMB_BG = '#0f172a';
+
 const Projects: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -63,23 +65,55 @@ const Projects: React.FC = () => {
           variants={containerVariants}
           className="grid lg:grid-cols-2 gap-8"
         >
-          {projectsData.projects.map((project, index) => (
+          {projectsData.projects.map((project, index) => {
+            const useCover = Boolean(project.thumbnailCover);
+            const thumbBg = project.thumbnailBg ?? DEFAULT_PROJECT_THUMB_BG;
+            const thumbLight = Boolean(project.thumbnailLight);
+
+            return (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
               className="group bg-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300 backdrop-blur-sm"
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden h-48">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <span className="bg-purple-500/80 text-white px-3 py-1 rounded-full text-sm">
+              <div
+                className={`relative h-48 w-full overflow-hidden ${!useCover && thumbLight ? 'border-b border-slate-600/30' : ''}`}
+                style={useCover ? undefined : { backgroundColor: thumbBg }}
+              >
+                {useCover ? (
+                  <>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  </>
+                ) : (
+                  <>
+                    <div
+                      className={`pointer-events-none absolute inset-0 z-0 bg-gradient-to-t to-transparent ${
+                        thumbLight ? 'from-slate-900/15' : 'from-black/35'
+                      }`}
+                    />
+                    <div className="absolute inset-0 z-[1] flex items-center justify-center overflow-hidden p-6">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="max-h-full max-w-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </>
+                )}
+                <div className="absolute top-4 right-4 z-[2]">
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm shadow-md ${
+                      thumbLight && !useCover
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-purple-500/90 text-white'
+                    }`}
+                  >
                     {project.category}
                   </span>
                 </div>
@@ -122,7 +156,8 @@ const Projects: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>

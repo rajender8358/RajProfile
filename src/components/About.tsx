@@ -6,13 +6,6 @@ import { aboutData } from '../data/static';
 const About: React.FC = () => {
   const statIcons = [Clock, Code, Users, Star];
 
-  const stats = [
-    { icon: Clock, label: 'Years Experience', value: '7+' },
-    { icon: Code, label: 'Projects Completed', value: '20+' },
-    { icon: Users, label: 'Happy Clients', value: '20+' },
-    { icon: Star, label: 'Technologies', value: '15+' },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
